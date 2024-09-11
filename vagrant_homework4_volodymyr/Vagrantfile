@@ -1,0 +1,46 @@
+
+Vagrant.configure("2") do |config|
+
+    config.vm.define "wm1" do |vm1|
+            vm1.vm.box = "ubuntu/xenial64"
+            vm1.vm.hostname = "webserver-01"
+            vm1.vm.network "public_network", bridge: "Realtek RTL8822BE 802.11ac PCIe Adapter"
+            vm1.vm.provision "shell", inline: <<-SHELL
+                apt-get update
+                apt-get install -y nginx
+                SHELL
+            vm1.disksize.size = "40GB"
+            vm1.vm.provider "virtualbox" do |vb|
+                vb.memory = "1024"
+                vb.cpus = 1
+            vm1.vm.synced_folder "./shared", "/vagrant_data"
+            end
+    end
+
+   config.vm.define "wm2" do |vm2|
+      vm2.vm.box = "ubuntu/xenial64"
+      vm2.vm.hostname = "webserver-02"
+   # vm2.vm.network "public_network", ip: "192.168.0.107", bridge: "Realtek RTL8822BE 802.11ac PCIe Adapter"
+         vm2.vm.network "private_network", ip: "192.168.200.107"
+         vm2.vm.provision "shell", path: "install.sh"
+         vm2.disksize.size = "40GB"
+         vm2.vm.synced_folder "./shared", "/vagrant_data"
+         vm2.vm.provider "virtualbox" do |vb|
+             vb.memory = "1048"
+             vb.cpus = 1
+        end
+    end
+
+    config.vm.define "wm3" do |vm3|
+        vm3.vm.box = "ubuntu/xenial64"
+      vm3.vm.hostname = "webserver-03"
+       vm3.vm.network "public_network", ip: "192.168.43.221", bridge: "Realtek RTL8822BE 802.11ac PCIe Adapter"
+        vm3.vm.provision "shell", path: "install.sh"
+        vm3.disksize.size = "40GB"
+     vm3.vm.provider "virtualbox" do |vb|
+           vb.memory = "1024"
+           vb.cpus = 1
+        vm3.vm.synced_folder "./shared", "/vagrant_data"
+       end
+      end
+end
