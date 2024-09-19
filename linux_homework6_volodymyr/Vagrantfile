@@ -1,0 +1,21 @@
+Vagrant.configure("2") do |config|
+
+    config.vm.define "vm1" do |vm1|
+            vm1.vm.box = "ubuntu/xenial64"
+            vm1.vm.hostname = "webserver-01"
+            vm1.vm.network "public_network", bridge: "Realtek RTL8822BE 802.11ac PCIe Adapter"
+
+            vm1.vm.provision "shell", inline: <<-SHELL
+                apt-get update
+                apt-get install -y nginx
+                SHELL
+            vm1.disksize.size = "60GB"
+            vm1.vm.provider "virtualbox" do |vb|
+                vb.customize ["modifyvm", :id, "--cableconnected1", "on"]
+                vb.memory = "4096"
+                vb.cpus = 2
+            vm1.vm.synced_folder "./shared", "/vagrant_data"
+            end
+    end
+end
+

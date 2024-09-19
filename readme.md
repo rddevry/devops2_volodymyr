@@ -15,4 +15,8 @@ Welcome to the project documentation. Below you can find links to  `README.md` f
    - Located in: `vagrant_homework4_volodymyr` folder
    - [View README-vagrant.md](./vagrant_homework4_volodymyr/README-vagrant.md)
 
+4. **Linux Homework 6 - Volodymyr**
+   - Located in: `linux_homework6_volodymyr` folder
+   - [View README-Linux.md](./linux_homework6_volodymyr/README-Linux.md)
+
 Feel free to check these files for more detailed instructions and information related to their respective topics.
