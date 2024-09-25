@@ -19,4 +19,8 @@ Welcome to the project documentation. Below you can find links to  `README.md` f
    - Located in: `linux_homework6_volodymyr` folder
    - [View README-Linux.md](./linux_homework6_volodymyr/README-Linux.md)
 
+5. **Bash Homework 8 - Volodymyr**
+   - Located in: `bash-script_homework8_volodymyr` folder
+   - [View README-bash.md](./bash-script_homework8_volodymyr/README-bash.md)
+
 Feel free to check these files for more detailed instructions and information related to their respective topics.
