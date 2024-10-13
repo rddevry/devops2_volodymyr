@@ -23,4 +23,8 @@ Welcome to the project documentation. Below you can find links to  `README.md` f
    - Located in: `bash-script_homework8_volodymyr` folder
    - [View README-bash.md](./bash-script_homework8_volodymyr/README-bash.md)
 
+6. **MySQL Homework 13 - Volodymyr**
+   - Located in: `MySQL_homework13_volodymyr` folder
+   - [View README-MySQL.md](./MySQL_homework13_volodymyr/README-MySQL.md)
+
 Feel free to check these files for more detailed instructions and information related to their respective topics.
