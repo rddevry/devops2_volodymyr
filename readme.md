@@ -31,4 +31,10 @@ Welcome to the project documentation. Below you can find links to  `README.md` f
    - Located in: `noSQL-mongo-db_homework14_volodymyr` folder
    - [View README-MongoDB.md](./noSQL-mongo-db_homework14_volodymyr/README-MongoDB.md)
 
+
+8. **Docker-compose_homework17_Volodymyr**
+   - Located in: `docker-compose_homework17_volodymyr` folder
+   - [View README-docker-compose.md](./docker-compose_homework17_volodymyr/README-docker-compose.md)
+
+
 Feel free to check these files for more detailed instructions and information related to their respective topics.

@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  db:
+    build:
+      context: ./db-data
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: school_db
+    volumes:
+      - ./db-data/school_db.sql:/docker-entrypoint-initdb.d/school_db.sql
+    networks:
+      - appnet
+
+  web:
+    build:
+      context: ./web-data
+    ports:
+      - "0:80"
+    volumes:
+      - ./web-data:/usr/share/nginx/html
+    networks:
+      - appnet
+
+  cache:
+    image: redis:latest
+    networks:
+      - appnet
+
+volumes:
+  db-data:
+  web-data:
+
+networks:
+  appnet:
