@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: falco
+  namespace: kube-system
+spec:
+  selector:
+    matchLabels:
+      app: falco
+  template:
+    metadata:
+      labels:
+        app: falco
+    spec:
+      containers:
+        - name: falco
+          image: falcosecurity/falco:latest
+          securityContext:
+            privileged: true  # Привілейований доступ для моніторингу системних викликів
+          volumeMounts:
+            - name: proc
+              mountPath: /host/proc
+              readOnly: true
+            - name: boot
+              mountPath: /host/boot
+              readOnly: true
+            - name: lib-modules
+              mountPath: /host/lib/modules
+              readOnly: true
+            - name: docker-sock
+              mountPath: /host/var/run/docker.sock
+              readOnly: true
+            - name: usr
+              mountPath: /host/usr
+              readOnly: true
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "100m"
+              memory: "256Mi"
+      volumes:
+        - name: proc
+          hostPath:
+            path: /proc
+            type: Directory
+        - name: boot
+          hostPath:
+            path: /boot
+            type: Directory
+        - name: lib-modules
+          hostPath:
+            path: /lib/modules
+            type: Directory
+        - name: docker-sock
+          hostPath:
+            path: /var/run/docker.sock
+            type: Socket
+        - name: usr
+          hostPath:
+            path: /usr
+            type: Directory

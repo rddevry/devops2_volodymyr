@@ -27,14 +27,16 @@ Welcome to the project documentation. Below you can find links to  `README.md` f
    - Located in: `MySQL_homework13_volodymyr` folder
    - [View README-MySQL.md](./MySQL_homework13_volodymyr/README-MySQL.md)
 
-7. **NoSQL Mongo-Homework 14 - Volodymyr**
+7. **NoSQL Mongo Homework 14 - Volodymyr**
    - Located in: `noSQL-mongo-db_homework14_volodymyr` folder
    - [View README-MongoDB.md](./noSQL-mongo-db_homework14_volodymyr/README-MongoDB.md)
 
-
-8. **Docker-compose_homework17_Volodymyr**
+8. **Docker-compose Homework 17 - Volodymyr**
    - Located in: `docker-compose_homework17_volodymyr` folder
    - [View README-docker-compose.md](./docker-compose_homework17_volodymyr/README-docker-compose.md)
 
+9. **Selfhosted K8s Homework 20 - Volodymyr**
+   - Located in: `selfhosted_K8s_homework20_volodymyr` folder
+   - [View README-minikube.md](./selfhosted_K8s_homework20_volodymyr/README-minikube.md)
 
 Feel free to check these files for more detailed instructions and information related to their respective topics.
