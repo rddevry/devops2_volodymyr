@@ -38,5 +38,9 @@ Welcome to the project documentation. Below you can find links to  `README.md` f
 9. **Selfhosted K8s Homework 20 - Volodymyr**
    - Located in: `selfhosted_K8s_homework20_volodymyr` folder
    - [View README-minikube.md](./selfhosted_K8s_homework20_volodymyr/README-minikube.md)
+   
+10. **AWS_Basics Homework 22 - Volodymyr**
+    - Located in: `AWS_basics_Homework_22` folder
+    - [View README-AWS-Basics.md](./AWS_basics_Homework_22/README-AWS-Basics.md)
 
 Feel free to check these files for more detailed instructions and information related to their respective topics.
