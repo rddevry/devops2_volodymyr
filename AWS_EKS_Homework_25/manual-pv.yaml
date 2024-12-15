@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: my-pv
+spec:
+  capacity:
+    storage: 10Gi  # Розмір зберігання
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce  # Доступ лише для одного вузла одночасно
+  persistentVolumeReclaimPolicy: Retain  # Політика видалення PV після знищення PVC
+  storageClassName: ebs-sc  # Ім'я StorageClass
+  awsElasticBlockStore:
+    volumeID: vol-0225686ac8e72869f  # ID вашого EBS диска
+    fsType: ext4
