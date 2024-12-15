@@ -43,4 +43,8 @@ Welcome to the project documentation. Below you can find links to  `README.md` f
     - Located in: `AWS_basics_Homework_22` folder
     - [View README-AWS-Basics.md](./AWS_basics_Homework_22/README-AWS-Basics.md)
 
+11. **AWS-EKS Homework 25 - Volodymyr**
+    - Located in: `AWS_EKS_Homework_25` folder
+    - [View README-AWS-EKS-hw25.md](./AWS_EKS_Homework_25/README-AWS-EKS-hw25.md)
+
 Feel free to check these files for more detailed instructions and information related to their respective topics.

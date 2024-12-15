@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  containers:
+    - name: my-container
+      image: nginx  # Ви можете змінити на будь-який контейнер, який вам потрібен
+      volumeMounts:
+        - mountPath: /usr/share/nginx/html  # Шлях до папки, де зберігаються дані
+          name: my-storage
+  volumes:
+    - name: my-storage
+      persistentVolumeClaim:
+        claimName: my-pvc  # Використовуємо PVC, яке було створене
