@@ -47,4 +47,8 @@ Welcome to the project documentation. Below you can find links to  `README.md` f
     - Located in: `AWS_EKS_Homework_25` folder
     - [View README-AWS-EKS-hw25.md](./AWS_EKS_Homework_25/README-AWS-EKS-hw25.md)
 
+12. **AWS-RDS Homework 27 - Volodymyr**
+    - Located in: `AWS_RDS_Homework27` folder
+    - [View README-AWS-RDS-hw27.md](./AWS_RDS_Homework27/README-AWS-RDS-hw27.md)
+
 Feel free to check these files for more detailed instructions and information related to their respective topics.
