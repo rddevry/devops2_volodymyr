@@ -51,4 +51,8 @@ Welcome to the project documentation. Below you can find links to  `README.md` f
     - Located in: `AWS_RDS_Homework27` folder
     - [View README-AWS-RDS-hw27.md](./AWS_RDS_Homework27/README-AWS-RDS-hw27.md)
 
+13. **AWS-Cloudformation Homework 28 - Volodymyr**
+    - Located in: `AWS_Cloudformation_Homework_28` folder
+    - [View README_AWS_Cloudformation_HW28.md](./AWS_Cloudformation_Homework_28/README_AWS_Cloudformation_HW28.md)
+
 Feel free to check these files for more detailed instructions and information related to their respective topics.
