@@ -55,4 +55,8 @@ Welcome to the project documentation. Below you can find links to  `README.md` f
     - Located in: `AWS_Cloudformation_Homework_28` folder
     - [View README_AWS_Cloudformation_HW28.md](./AWS_Cloudformation_Homework_28/README_AWS_Cloudformation_HW28.md)
 
+14. **AWS-Terraform Homework 30 - Volodymyr**
+    - Located in: `AWS_Terraform_HW30` folder
+    - [View README_AWS_Terraform_HW30.md](./AWS_Terraform_HW30/README_AWS_Terraform_HW30.md)
+
 Feel free to check these files for more detailed instructions and information related to their respective topics.
