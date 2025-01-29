@@ -59,4 +59,8 @@ Welcome to the project documentation. Below you can find links to  `README.md` f
     - Located in: `AWS_Terraform_HW30` folder
     - [View README_AWS_Terraform_HW30.md](./AWS_Terraform_HW30/README_AWS_Terraform_HW30.md)
 
+15. **AWS-Ansible Homework 32 - Volodymyr**
+    - Located in: `HW32_Ansible_Volodymyr` folder
+    - [View README_Ansible_HW32.md](./HW32_Ansible_Volodymyr/README_Ansible_HW32.md)
+
 Feel free to check these files for more detailed instructions and information related to their respective topics.

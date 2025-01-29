@@ -1,0 +1,91 @@
+---
+- name: Create user "{{ ansible_user }}"
+  ansible.builtin.user:
+    name: "{{ ansible_user }}"
+    state: present
+    shell: "/bin/bash"
+    groups: "{{ group }}"
+
+- name: Create "{{ group }}" user ssh directory
+  ansible.builtin.file:
+    path: "/home/{{ ansible_user }}/.ssh"
+    state: directory
+    owner: "{{ ansible_user }}"
+    group: "{{ group }}"
+    mode: 0700
+
+- name: Ensure "{{ group }}" user auth_key file exist
+  ansible.builtin.copy:
+    content: ""
+    dest: "/home/{{ ansible_user }}/.ssh/authorized_keys"
+    owner: "{{ ansible_user }}"
+    group: "{{ group }}"
+    mode: 0600
+
+- name: Add public keys into authorized_keys file for "{{ group }}" user
+  ansible.builtin.lineinfile:
+    path: "/home/{{ ansible_user }}/.ssh/authorized_keys"
+    regexp: "{{ devops_public_item | regex_escape }}"
+    line: "{{ devops_public_item }}"
+  loop_control:
+    loop_var: devops_public_item
+  with_items:
+    - "{{ devops_public_key }}"
+
+
+#- name: add key for user "{{ username }}"
+#  ansible.builtin.authorized_key:
+#    user: "{{ username }}"
+#    state: present
+#    key: "{{ lookup('file', './files/id_rsa.pub') }}"
+
+
+- name: Install baseline packages
+  ansible.builtin.apt:
+    name:
+      - vim
+      - git
+      - mc
+      - ufw
+    state: present
+    update_cache: true
+
+
+- name: Disable root login and pass auth
+  ansible.builtin.lineinfile:
+    path: "/etc/ssh/sshd_config"
+    regexp: "{{ item.orig }}"
+    line: "{{ item.changed }}"
+  with_items:
+    - { orig: '^PermitRootLogin', changed: 'PermitRootLogin no' }
+    - { orig: '^PasswordAuthentication', changed: 'PasswordAuthentication no' }
+  notify: Restart SSH
+
+############ OLD #############
+
+#- name: Створення директорії для SSH ключів
+#  file:
+#    path: "/home/{{ ansible_user }}/.ssh"
+#    state: directory
+#    mode: '0700'
+#    owner: "{{ ansible_user }}"
+#    group: "{{ ansible_user }}"
+#
+#- name: Копіювання SSH ключа
+#  copy:
+#    src: "id_rsa.pub"
+#    dest: "/home/{{ ansible_user }}/.ssh/authorized_keys"
+#    mode: '0600'
+#    owner: "{{ ansible_user }}"
+#    group: "{{ ansible_user }}"
+#
+#- name: Встановлення базових пакетів
+#  apt:
+#    name:
+#      - vim
+#      - git
+#      - mc
+#      - ufw
+#    state: present
+#    update_cache: yes
+#    cache_valid_time: 3600

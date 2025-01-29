@@ -1,0 +1,21 @@
+---
+- name: Setting up servers for ip-10-0-10-192.ec2.internal
+  hosts: ip-10-0-10-192.ec2.internal
+  become: true
+  vars_files:
+    - vars.yml
+
+  roles:
+    - baseline
+    - firewall
+
+- name: Setting up servers for ip-10-0-10-34.ec2.internal
+  hosts: ip-10-0-10-34.ec2.internal
+  become: true
+  vars_files:
+    - vars.yml
+    - vault.yml
+
+  roles:
+    - baseline
+    - nginx
