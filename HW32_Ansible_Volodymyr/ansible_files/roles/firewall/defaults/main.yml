@@ -1,0 +1,8 @@
+---
+ufw_default_policy: "deny incoming"
+ufw_logging: "on"
+ufw_allowed_ports:
+  - "22"       # SSH
+  - "80"       # HTTP
+  - "443"      # HTTPS
+ufw_denied_ports: []
