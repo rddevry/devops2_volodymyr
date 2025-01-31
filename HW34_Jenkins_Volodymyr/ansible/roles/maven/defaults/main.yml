@@ -1,0 +1,4 @@
+---
+# Default variables for the Maven role
+maven_major_version: 3
+maven_version: 3.9.4

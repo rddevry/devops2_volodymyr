@@ -1,0 +1,9 @@
+- name: Deploy application
+  hosts: role_app
+  become: true
+  roles:
+    - roles/app_deploy
+#    - roles/maven
+  vars_files:
+    - ../roles/app_deploy/vars/key.yml
+    - ../roles/app_deploy/vars/main.yml

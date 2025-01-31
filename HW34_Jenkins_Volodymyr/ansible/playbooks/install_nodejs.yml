@@ -1,0 +1,6 @@
+- name: Deploy application
+  hosts: all #stack_nodejs
+  become: true
+  roles:
+    - roles/nodejs
+    - roles/maven
