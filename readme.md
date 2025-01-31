@@ -63,4 +63,8 @@ Welcome to the project documentation. Below you can find links to  `README.md` f
     - Located in: `HW32_Ansible_Volodymyr` folder
     - [View README_Ansible_HW32.md](./HW32_Ansible_Volodymyr/README_Ansible_HW32.md)
 
+16. **Jenkins Homework 34 - Volodymyr**
+    - Located in: `HW34_Jenkins_Volodymyr` folder
+    - [View README_Jenkins_HW34.md](./HW34_Jenkins_Volodymyr/README_Jenkins_HW34.md)
+
 Feel free to check these files for more detailed instructions and information related to their respective topics.

@@ -1,0 +1,45 @@
+---
+- name: Ensure required dependencies are installed
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - wget
+    - tar
+  become: yes
+
+- name: Download Maven archive
+  get_url:
+    url: "https://dlcdn.apache.org/maven/maven-{{ maven_major_version }}/{{ maven_version }}/binaries/apache-maven-{{ maven_version }}-bin.tar.gz"
+    dest: "/tmp/apache-maven-{{ maven_version }}-bin.tar.gz"
+
+- name: Extract Maven archive
+  unarchive:
+    src: "/tmp/apache-maven-{{ maven_version }}-bin.tar.gz"
+    dest: /opt
+    remote_src: yes
+  become: yes
+
+- name: Create a symbolic link for Maven
+  file:
+    src: "/opt/apache-maven-{{ maven_version }}"
+    dest: /opt/maven
+    state: link
+  become: yes
+
+- name: Set Maven environment variables
+  copy:
+    dest: /etc/profile.d/maven.sh
+    content: |
+      export M2_HOME=/opt/maven
+      export PATH=$M2_HOME/bin:$PATH
+    owner: root
+    group: root
+    mode: '0644'
+  become: yes
+
+
+- name: Load Maven environment variables (if needed in playbook)
+  shell: ". /etc/profile.d/maven.sh"
+  become: yes
+
