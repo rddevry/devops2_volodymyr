@@ -71,4 +71,8 @@ Welcome to the project documentation. Below you can find links to  `README.md` f
     - Located in: `HW35_Monitoring_Volodymyr` folder
     - [View README_Monitoring_HW35.md](./HW35_Monitoring_Volodymyr/README_Monitoring_HW35.md)
 
+18. **AWS-Lambda Homework 37 - Volodymyr**
+    - Located in: `HW37_AWS_Lambda_Volodymyr` folder
+    - [View README_AWS_Lambda_HW37.md](./HW37_AWS_Lambda_Volodymyr/README_AWS_Lambda_HW37.md)
+
 Feel free to check these files for more detailed instructions and information related to their respective topics.
