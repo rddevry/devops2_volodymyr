@@ -67,4 +67,8 @@ Welcome to the project documentation. Below you can find links to  `README.md` f
     - Located in: `HW34_Jenkins_Volodymyr` folder
     - [View README_Jenkins_HW34.md](./HW34_Jenkins_Volodymyr/README_Jenkins_HW34.md)
 
+17. **Monitoring Homework 35 - Volodymyr**
+    - Located in: `HW35_Monitoring_Volodymyr` folder
+    - [View README_Monitoring_HW35.md](./HW35_Monitoring_Volodymyr/README_Monitoring_HW35.md)
+
 Feel free to check these files for more detailed instructions and information related to their respective topics.
